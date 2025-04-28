@@ -23,7 +23,8 @@ public class CdCommand implements Command {
     }
 
     fileSystem.setCurrentDirectory(targetDir.get());
-    return "moved to directory '" +
-        (targetDir.get() == fileSystem.getRoot() ? "/" : targetDir.get().getName()) + "'";
+    return "moved to directory '"
+        + (targetDir.get() == fileSystem.getRoot() ? "/" : targetDir.get().getName())
+        + "'";
   }
 }

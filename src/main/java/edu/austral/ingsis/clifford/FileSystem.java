@@ -36,8 +36,7 @@ public class FileSystem {
     }
 
     if (path.equals("..")) {
-      return Optional.ofNullable(currentDirectory.getParent())
-          .or(() -> Optional.of(root));
+      return Optional.ofNullable(currentDirectory.getParent()).or(() -> Optional.of(root));
     }
 
     Directory startDir;

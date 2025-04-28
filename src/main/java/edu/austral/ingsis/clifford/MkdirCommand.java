@@ -10,12 +10,14 @@ public class MkdirCommand implements Command {
   @Override
   public String execute(String[] args) {
     if (args.length < 1) {
-      return "directory name not specified";}
+      return "directory name not specified";
+    }
 
     String dirName = args[0];
 
     if (dirName.contains("/") || dirName.contains(" ")) {
-      return "invalid directory name";}
+      return "invalid directory name";
+    }
 
     Directory currentDir = fileSystem.getCurrentDirectory();
 

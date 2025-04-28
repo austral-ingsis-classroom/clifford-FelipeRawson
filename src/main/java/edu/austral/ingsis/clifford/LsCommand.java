@@ -30,9 +30,7 @@ public class LsCommand implements Command {
       }
     }
 
-    return items.stream()
-        .map(FileSystemItem::getName)
-        .collect(Collectors.joining(" "));
+    return items.stream().map(FileSystemItem::getName).collect(Collectors.joining(" "));
   }
 
   private String extractOrderFlag(String[] args) {

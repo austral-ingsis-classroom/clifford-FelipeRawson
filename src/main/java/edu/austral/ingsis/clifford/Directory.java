@@ -14,7 +14,7 @@ public final class Directory implements FileSystemItem {
     this.parent = null;
   }
 
-  //Constructor para directorios no root
+  // Constructor para directorios no root
   public Directory(String name, Directory parent) {
     this.name = name;
     this.parent = parent;
@@ -33,9 +33,7 @@ public final class Directory implements FileSystemItem {
   }
 
   public Optional<FileSystemItem> findChild(String name) {
-    return children.stream()
-        .filter(item -> item.getName().equals(name))
-        .findFirst();
+    return children.stream().filter(item -> item.getName().equals(name)).findFirst();
   }
 
   public Directory getParent() {
